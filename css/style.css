@@ -118,12 +118,10 @@ nav ul li a:hover {
 /* 首页 Hero */
 .hero {
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../assets/images/banner.png') no-repeat center center/cover;
-    height: 60vh;
+    height: 80vh;
     color: white;
     display: flex;
-    align-items: flex-end;
-    padding-top: 100px;
-    padding-bottom: 80px;
+    align-items: center;
     text-align: center;
 }
 
@@ -273,16 +271,6 @@ nav ul li a:hover {
 
 /* 移动端适配 */
 @media (max-width: 768px) {
-    .hero {
-        padding-top: 80px;
-        padding-bottom: 50px;
-        height: 50vh;
-    }
-    
-    .hero h1 {
-        font-size: 2.2rem;
-    }
-
     .social-links-container {
         justify-content: center;
         margin-bottom: 20px;
