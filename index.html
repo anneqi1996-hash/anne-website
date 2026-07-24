@@ -1,133 +1,125 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的展示页 | 专业单页网站模板</title>
-    <!-- 引入样式表 -->
-    <link rel="stylesheet" href="style.css">
-    <!-- 引入 Google Fonts 或 Lucide 图标（可选，这里使用系统字体栈确保加载速度） -->
+    <title>Global Trade Co. | Premium Product Exhibition</title>
+    
+    <!-- Facebook Pixel Code Placeholder -->
+    <!-- 说明：请将下面的 YOUR_PIXEL_ID 替换为您实际的 Facebook Pixel ID -->
+    <!-- 
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'YOUR_PIXEL_ID');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"
+    /></noscript>
+    -->
+    <!-- End Facebook Pixel Code -->
+
+    <link rel="stylesheet" href="css/style.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- 导航栏 -->
-    <header class="navbar">
+    <header>
         <div class="container">
-            <div class="logo">
-                <a href="#">LOGO</a>
-            </div>
-            <nav class="nav-menu" id="navMenu">
+            <a href="index.html" class="logo">GLOBAL TRADE</a>
+            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+            <nav>
                 <ul>
-                    <li><a href="#hero">首页</a></li>
-                    <li><a href="#services">服务</a></li>
-                    <li><a href="#about">关于</a></li>
-                    <li><a href="#contact">联系我们</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-            <div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
         </div>
     </header>
 
-    <!-- Hero 区块 -->
-    <section id="hero" class="hero-section">
+    <section class="hero">
         <div class="container">
-            <div class="hero-content">
-                <h1>打造您的专业在线形象</h1>
-                <p>一个简洁、现代且响应式的静态展示页模板，帮助您快速开启线上业务。</p>
-                <div class="hero-btns">
-                    <a href="#services" class="btn btn-primary">了解更多</a>
-                    <a href="#contact" class="btn btn-outline">联系我们</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <!-- 占位图片，用户可修改为 assets/images/hero.png -->
-                <img src="https://via.placeholder.com/600x400" alt="Hero Image">
+            <div>
+                <h1>Quality Manufacturing for Global Markets</h1>
+                <p>Reliable sourcing, competitive pricing, and premium quality products.</p>
+                <a href="products.html" class="btn">View Our Products</a>
             </div>
         </div>
     </section>
 
-    <!-- 服务/功能介绍 -->
-    <section id="services" class="services-section">
+    <section class="features">
         <div class="container">
-            <h2 class="section-title">核心服务</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="icon">🚀</div>
-                    <h3>快速交付</h3>
-                    <p>优化代码结构，确保网站加载速度飞快，提升用户体验。</p>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Premium Quality</h3>
+                    <p>All products undergo strict QC processes before shipment.</p>
                 </div>
-                <div class="service-card">
-                    <div class="icon">📱</div>
-                    <h3>响应式设计</h3>
-                    <p>完美适配手机、平板及电脑，让您的内容在任何屏幕上都光彩夺目。</p>
+                <div class="feature-item">
+                    <i class="fas fa-shipping-fast"></i>
+                    <h3>Fast Delivery</h3>
+                    <p>Global logistics network ensuring timely arrival of your orders.</p>
                 </div>
-                <div class="service-card">
-                    <div class="icon">🛠️</div>
-                    <h3>易于自定义</h3>
-                    <p>清晰的代码注释，您可以轻松修改文字、颜色和图片路径。</p>
+                <div class="feature-item">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Reliable Partner</h3>
+                    <p>Over 10 years of experience in international trade.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 联系信息 -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2 class="section-title">联系我们</h2>
-            <div class="contact-wrapper">
-                <div class="contact-info">
-                    <h3>获取支持</h3>
-                    <p>如果您有任何问题或合作意向，请随时通过以下方式联系我们。</p>
-                    <ul>
-                        <li><strong>地址:</strong> 中国上海市某某路123号</li>
-                        <li><strong>邮箱:</strong> contact@example.com</li>
-                        <li><strong>电话:</strong> +86 021 1234 5678</li>
-                    </ul>
+    <section class="container" style="padding: 60px 0;">
+        <h2 style="text-align: center; margin-bottom: 40px;">Featured Products</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://via.placeholder.com/400x300?text=Product+1" alt="Product 1">
+                <div class="product-info">
+                    <h3>Industrial Solution A</h3>
+                    <p>High-performance component for manufacturing lines.</p>
+                    <a href="products.html" class="btn" style="margin-top: 15px; width: 100%; text-align: center;">Details</a>
                 </div>
-                <div class="contact-form">
-                    <!-- 这里仅为展示，静态页通常需要集成第三方服务（如 Formspree）来处理表单 -->
-                    <form action="#">
-                        <div class="form-group">
-                            <input type="text" placeholder="您的姓名" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" placeholder="您的邮箱" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea placeholder="您的消息" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">发送消息</button>
-                    </form>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/400x300?text=Product+2" alt="Product 2">
+                <div class="product-info">
+                    <h3>Consumer Grade B</h3>
+                    <p>Durable and cost-effective solution for retail.</p>
+                    <a href="products.html" class="btn" style="margin-top: 15px; width: 100%; text-align: center;">Details</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/400x300?text=Product+3" alt="Product 3">
+                <div class="product-info">
+                    <h3>Custom Hardware C</h3>
+                    <p>Specially designed for unique industrial applications.</p>
+                    <a href="products.html" class="btn" style="margin-top: 15px; width: 100%; text-align: center;">Details</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 页脚 -->
-    <footer class="footer">
+    <!-- WhatsApp Floating Button -->
+    <!-- 说明：请将下面的 YOUR_NUMBER 替换为您的 WhatsApp 号码 (格式: 国家代码+号码) -->
+    <a href="https://wa.me/YOUR_NUMBER" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <footer style="background: #333; color: white; padding: 40px 0; text-align: center;">
         <div class="container">
-            <p>&copy; 2026 我的品牌. 保留所有权利。</p>
-            <div class="social-links">
-                <a href="#">微信</a>
-                <a href="#">微博</a>
-                <a href="#">GitHub</a>
-            </div>
+            <p>&copy; 2026 Global Trade Co. All Rights Reserved.</p>
         </div>
     </footer>
 
-    <!-- 简单的导航切换脚本 -->
-    <script>
-        const mobileMenu = document.getElementById('mobile-menu');
-        const navMenu = document.getElementById('navMenu');
-
-        mobileMenu.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            mobileMenu.classList.toggle('is-active');
-        });
-    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>
