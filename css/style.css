@@ -234,6 +234,7 @@ nav ul li a:hover {
     .contact-container {
         grid-template-columns: 1fr;
     }
+}
 
 /* 社交图标样式 */
 .social-links-container {
