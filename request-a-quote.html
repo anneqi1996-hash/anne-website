@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Request a Quote - Steel Furniture Factory · BOCA STEEL</title>
+<meta name="description" content="Request a quotation: send the category, the quantity and the destination port. Drawing-based quoting with sampling before production.">
+<link rel="canonical" href="https://bocasteel.com/request-a-quote">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BOCA STEEL">
+<meta property="og:title" content="Request a Quote - Steel Furniture Factory · BOCA STEEL">
+<meta property="og:description" content="Request a quotation: send the category, the quantity and the destination port. Drawing-based quoting with sampling before production.">
+<meta property="og:url" content="https://bocasteel.com/request-a-quote">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&amp;family=Manrope:wght@400;500;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header rfq-header">
+  <div class="container">
+    <div class="site-header__bar">
+      <a class="brand" href="/" aria-label="Home">
+        <span class="brand__mark" data-site="brandShort" aria-hidden="true"></span>
+        <span class="brand__text">
+          <span data-site="brand"></span>
+          <span class="brand__sub">Steel furniture &middot; Wuyi plant</span>
+        </span>
+      </a>
+      <a class="rfq-back" href="/">&larr; Back to site</a>
+    </div>
+  </div>
+</header>
+<main id="main" class="section">
+  <div class="container">
+    <div class="rfq">
+      <div>
+        <p class="mono-label"><span class="section-index">RFQ</span>Request a quote</p>
+        <h1 class="rfq__title">Send the range, the quantity and the port</h1>
+        <p class="section-lead">A drawing, a reference photo or the room dimensions gets you a price and a lead time. Four fields are enough to start; the rest helps us answer in one reply.</p>
+
+        <p class="form__notice form__notice--prefill" data-prefill-note hidden></p>
+
+        <form class="form form--rfq" id="rfq-form" data-validate data-rfq-form novalidate>
+          <div class="hp" aria-hidden="true">
+            <label for="rfq-gotcha">Leave this field empty</label>
+            <input id="rfq-gotcha" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
+          </div>
+
+          <div class="form__success" data-form-success role="status" aria-live="polite" hidden>
+            <strong>Thank you &mdash; your request has been sent.</strong>
+            <p>We reply by email, usually within one business day. If you have drawings or photos, send them to <a data-site="email"></a> and mention your company name.</p>
+          </div>
+
+          <div class="form__group">
+            <div class="form__row">
+              <div class="field">
+                <label for="rfq-name">Name<span class="req">*</span></label>
+                <input id="rfq-name" name="name" type="text" autocomplete="name" required>
+                <span class="field__error">Please enter your name.</span>
+              </div>
+              <div class="field">
+                <label for="rfq-company">Company<span class="req">*</span></label>
+                <input id="rfq-company" name="company" type="text" autocomplete="organization" required>
+                <span class="field__error">Please enter your company.</span>
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="field">
+                <label for="rfq-country">Country / region<span class="req">*</span></label>
+                <input id="rfq-country" name="country" type="text" autocomplete="country-name" required>
+                <span class="field__error">Please enter the destination country.</span>
+              </div>
+              <div class="field">
+                <label for="rfq-email">Email<span class="req">*</span></label>
+                <input id="rfq-email" name="email" type="email" autocomplete="email" required>
+                <span class="field__error">Please enter a valid email address.</span>
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="field">
+                <label for="rfq-whatsapp">WhatsApp <span class="field__hint">optional</span></label>
+                <input id="rfq-whatsapp" name="whatsapp" type="tel" autocomplete="tel">
+              </div>
+              <div class="field">
+                <label for="rfq-category">Product interest<span class="req">*</span></label>
+                <select id="rfq-category" name="category" required>
+                  <option value="">Select a category</option>
+                  <option value="school-desks-chairs">School Desks &amp; Chairs</option><option value="mobile-shelving">Mobile Shelving Systems</option><option value="bunk-beds">Steel Bunk Beds</option><option value="library-shelving">Library Shelving</option><option value="reading-tables">Reading Tables</option><option value="file-cabinets">File Cabinets</option><option value="warehouse-racking">Warehouse Racking</option><option value="stacking-racks">Stacking Racks</option><option value="steel-office-cabinets">Steel Office Cabinets</option><option value="desk-legs">Desk Legs &amp; Table Frames</option><option value="adjustable-desk-frames">Adjustable Desk Frames</option>
+                  <option value="mixed">Mixed categories / project package</option>
+                </select>
+                <span class="field__error">Please choose a category.</span>
+              </div>
+            </div>
+            <div class="field">
+              <label for="rfq-quantity">Quantity</label>
+              <input id="rfq-quantity" name="quantity" type="text" placeholder="e.g. 300 sets, or 1 x 40HQ mixed">
+              <span class="field__hint">Quantities per model help, even if they are still estimates.</span>
+            </div>
+          </div>
+
+          <hr class="form__divider">
+
+          <div class="form__group">
+            <div class="field">
+              <label for="rfq-message">Message</label>
+              <textarea id="rfq-message" name="message" placeholder="Room dimensions, target price, delivery window, compliance requirements..."></textarea>
+            </div>
+            <div class="field" data-upload-field>
+              <label for="rfq-file">Drawing or specification</label>
+              <input id="rfq-file" name="file" type="file" accept=".pdf,.dwg,.dxf,.jpg,.png,.xlsx">
+              <span class="field__hint">PDF, DWG, DXF, JPG or XLSX &middot; up to 10 MB.</span>
+            </div>
+            <p class="field__hint field__hint--note" data-upload-note hidden></p>
+          </div>
+
+          <div class="form__foot">
+            <button class="btn btn--lg btn--primary" type="submit">Send request</button>
+            <a class="btn btn--lg btn--secondary" data-site-link="whatsapp" data-pending-label="WhatsApp (pending)">WhatsApp</a>
+          </div>
+          <p class="form__status" data-form-status role="alert" hidden></p>
+          <p class="form__notice">Your details are used only to answer this enquiry. We never share them with third parties.</p>
+        </form>
+      </div>
+
+      <aside class="rfq__aside">
+        <div class="aside-card">
+          <h2>What happens next</h2>
+          <ul class="aside-list">
+            <li>We reply with a price, a lead time and the questions we still need answered.</li>
+            <li>If the item needs tooling, sampling is quoted separately before production.</li>
+            <li>You get a loading outline before the container is booked.</li>
+          </ul>
+        </div>
+        <div class="aside-card">
+          <h2>Prefer to write directly?</h2>
+          <div class="contact-list contact-list--gap">
+            <div class="contact-item"><span class="contact-item__k">Email</span><span class="contact-item__v"><a data-site="email"></a></span></div>
+            <div class="contact-item"><span class="contact-item__k">Phone</span><span class="contact-item__v"><a data-site-link="phone" data-site="phone"></a></span></div>
+            <div class="contact-item"><span class="contact-item__k">Working hours</span><span class="contact-item__v" data-site="hours"></span></div>
+            <div class="contact-item"><span class="contact-item__k">Plant</span><span class="contact-item__v" data-site="address"></span></div>
+          </div>
+        </div>
+        <div class="aside-card">
+          <h2>Already have a model?</h2>
+          <p>Send the SKU or a photo of the item you buy today. Matching an existing model is usually faster than starting from a blank drawing.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</main>
+<footer class="site-footer" id="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__brand" data-site="brand"></div>
+        <div class="footer__brand-sub">Steel furniture factory</div>
+        <p class="footer__about">Eleven categories across four project lines. OEM and project supply from our own plant in Wuyi.</p>
+        <p class="footer__attrib"><span data-site="brand"></span> is the export brand of <a href="/about#contact"><span data-site="legal"></span></a> &mdash; one company, one production base.</p>
+      </div>
+      <div>
+        <p class="footer__col-title">Products</p>
+        <ul class="footer__list"><li><a href="/products/school-desks-chairs">School Desks &amp; Chairs</a></li><li><a href="/products/mobile-shelving">Mobile Shelving Systems</a></li><li><a href="/products/bunk-beds">Steel Bunk Beds</a></li><li><a href="/products/library-shelving">Library Shelving</a></li><li><a href="/products/reading-tables">Reading Tables</a></li><li><a href="/products/file-cabinets">File Cabinets</a></li><li><a href="/products/warehouse-racking">Warehouse Racking</a></li><li><a href="/products/stacking-racks">Stacking Racks</a></li><li><a href="/products/steel-office-cabinets">Steel Office Cabinets</a></li><li><a href="/products/desk-legs">Desk Legs &amp; Table Frames</a></li><li><a href="/products/adjustable-desk-frames">Adjustable Desk Frames</a></li></ul>
+      </div>
+      <div>
+        <p class="footer__col-title">Company</p>
+        <ul class="footer__list">
+          <li><a href="/about">About us</a></li>
+          <li><a href="/about#factory">Factory</a></li>
+          <li><a href="/about#oem">OEM &amp; Custom</a></li>
+          <li><a href="/about#contact">Contact</a></li>
+          <li><a href="/products">Product overview</a></li>
+          <li><a href="/privacy">Privacy policy</a></li>
+          <li><a href="/terms">Terms of use</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__col-title">Contact</p>
+        <dl class="footer__contact-row">
+          <dt>Email</dt><dd><a data-site="email"></a></dd>
+          <dt>Phone</dt><dd><a data-site-link="phone" data-site="phone"></a></dd>
+          <dt>WhatsApp</dt><dd><a data-site-link="whatsapp" data-pending-label="Pending">WhatsApp</a></dd>
+          <dt>Plant</dt><dd data-site="address"></dd>
+          <dt>Hours</dt><dd data-site="hours"></dd>
+        </dl>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>&copy; <span data-site="year"></span> <span data-site="legal"></span></span>
+      <span><a href="/sitemap.xml">Sitemap</a> &middot; <a href="/privacy">Privacy</a> &middot; <a href="/terms">Terms</a> &middot; <span data-site="domain"></span></span>
+    </div>
+  </div>
+</footer>
+<script src="/js/site.config.js"></script>
+<script src="/js/site.js"></script>
+</body>
+</html>
