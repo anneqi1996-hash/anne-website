@@ -179,12 +179,23 @@
     var params = new URLSearchParams(window.location.search);
     var slug = params.get("category");
     var qty = params.get("quantity");
+    var model = (params.get("model") || "").trim().slice(0, 40);
+    var modelField = qs("#rfq-model");
+    if (modelField) { modelField.value = model; }
+
+    var lines = [];
     if (slug) {
       select.value = slug;
+      var cat = categoryBySlug(slug);
+      lines.push("Preselected: " + (cat ? cat.name : slug) + " — change it if you need another range.");
+    }
+    if (model) {
+      lines.push("Model " + model);
+    }
+    if (lines.length) {
       var note = qs("[data-prefill-note]");
       if (note) {
-        var cat = categoryBySlug(slug);
-        note.textContent = "Preselected: " + (cat ? cat.name : slug) + " — change it if you need another range.";
+        note.textContent = lines.join(" · ");
         note.hidden = false;
       }
     }
@@ -282,6 +293,8 @@
               success.hidden = false;
               success.scrollIntoView({ block: "center", behavior: "smooth" });
             }
+            // conversion event: only on a confirmed submission, never on failure
+            trackLead();
           })
           .catch(function (error) {
             showStatus(form,
@@ -307,6 +320,54 @@
     });
   }
 
+  /* ---------- 4. analytics (only when an ID is configured) ---------- */
+  function initTracking() {
+    var tracking = SITE.tracking || {};
+    var ga4Id = String(tracking.ga4Id || "").trim();
+    var pixelId = String(tracking.metaPixelId || "").trim();
+
+    if (ga4Id && !qs("script[data-ga4]")) {
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+      window.gtag("js", new Date());
+      window.gtag("config", ga4Id, { anonymize_ip: true });
+
+      var gtagScript = document.createElement("script");
+      gtagScript.async = true;
+      gtagScript.setAttribute("data-ga4", "1");
+      gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(ga4Id);
+      document.head.appendChild(gtagScript);
+    }
+
+    if (pixelId && !qs("script[data-meta-pixel]")) {
+      if (!window.fbq) {
+        var fbq = function () {
+          if (fbq.callMethod) { fbq.callMethod.apply(fbq, arguments); } else { fbq.queue.push(arguments); }
+        };
+        if (!window._fbq) { window._fbq = fbq; }
+        fbq.push = fbq;
+        fbq.loaded = true;
+        fbq.version = "2.0";
+        fbq.queue = [];
+        window.fbq = fbq;
+      }
+      window.fbq("init", pixelId);
+      window.fbq("track", "PageView");
+
+      var pixelScript = document.createElement("script");
+      pixelScript.async = true;
+      pixelScript.setAttribute("data-meta-pixel", "1");
+      pixelScript.src = "https://connect.facebook.net/en_US/fbevents.js";
+      document.head.insertBefore(pixelScript, document.head.firstChild);
+    }
+  }
+
+  /* fired once, from the success branch of the quote form */
+  function trackLead() {
+    if (window.fbq) { window.fbq("track", "Lead"); }
+    if (window.gtag) { window.gtag("event", "generate_lead", { event_category: "rfq" }); }
+  }
+
   /* ---------- boot ---------- */
   function boot() {
     injectBrand();
@@ -315,6 +376,7 @@
     initRfqPrefill();
     initUploadToggle();
     initValidation();
+    initTracking();
   }
 
   if (document.readyState === "loading") {

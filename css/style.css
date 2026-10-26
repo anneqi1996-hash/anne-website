@@ -824,3 +824,25 @@ strong { color: var(--ink); font-weight: 700; }
 }
 .field__hint--note a { color: var(--ink); border-bottom: 1px solid var(--accent); }
 input[type="file"]:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* ---------- 25. Model cards + comparison table ---------- */
+.model-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--sp-6) var(--col-gap); }
+.model-card { display: flex; flex-direction: column; background: var(--sand-50); border: 1px solid var(--card-line); border-radius: var(--r-md); overflow: hidden; }
+.model-card__media { aspect-ratio: 4 / 3; }
+.model-card__body { padding: 18px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+.model-card__title { font: 600 20px/1.25 var(--font-display); color: var(--ink); letter-spacing: -.01em; }
+.model-card__specs { display: grid; gap: 6px; margin: 0; }
+.model-card__specs > div { display: flex; justify-content: space-between; gap: 10px; border-top: 1px solid var(--line); padding-top: 6px; }
+.model-card__specs dt { font: 500 10.5px/1.5 var(--font-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-3); }
+.model-card__specs dd { margin: 0; font: 400 13.5px/1.5 var(--font-sans); color: var(--ink); text-align: right; }
+.model-card__cta { margin-top: auto; padding-top: 12px; }
+.spec-compare { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--r-sm); background: #fff; }
+.spec-compare table { min-width: 780px; font-size: 13.5px; }
+.spec-compare th, .spec-compare td { padding: 10px 12px; border-bottom: 1px solid var(--line); text-align: left; white-space: nowrap; vertical-align: top; }
+.spec-compare thead th { background: var(--sand-100); font: 700 10.5px/1.4 var(--font-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--ink-2); }
+.spec-compare tbody tr:hover { background: var(--sand-50); }
+.spec-compare .is-featured td:first-child { font-weight: 700; }
+.spec-flag { color: var(--accent); font: 700 13px/1 var(--font-mono); margin-left: 3px; cursor: help; }
+@media (max-width: 1199px) { .model-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 1023px) { .model-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 767px) { .model-grid { grid-template-columns: 1fr; } }

@@ -17,17 +17,17 @@ window.SITE = {
   brand: {
     name: "BOCA STEEL",                                      // 站上对外显示的品牌名
     short: "BS",                                             // logo 方块内的缩写（≤2 字符）
-    legal: "HeBei BoChang Metal Products Co., Ltd",           // 营业执照全称；与品牌名的关系在页脚署名行说明
+    legal: "Hebei BoChang Metal Products Co., Ltd",           // 营业执照全称；与品牌名的关系在页脚署名行说明
     tagline: "Steel furniture factory"
   },
   domain: "bocasteel.com",                                   // 已定域名
   email: "info@bocasteel.com",                               // 主邮箱
-  phone: null,                                               // 待客户提供（null = 页面显示 pending，不生成 tel: 链接）
-  whatsapp: null,                                            // 待客户提供（null = WhatsApp 按钮置灰）
+  phone: "+86 132 5326 0058",                                               // 待客户提供（null = 页面显示 pending，不生成 tel: 链接）
+  whatsapp: "+8613253260058",                                            // 待客户提供（null = WhatsApp 按钮置灰）
   address: {
-    line1: null,                                             // 门牌号待提供
-    city: "Wuyi County, Jinhua",
-    region: "Zhejiang",
+    line1: "South of Wuqian Road, Qiaotou Town",                                             // 门牌号待提供
+    city: "Wuyi County, Hengshui",
+    region: "Hebei",
     country: "China"
   },
   hours: "Mon–Sat, 08:30–18:00 (GMT+8)",
@@ -36,6 +36,12 @@ window.SITE = {
   forms: {
     rfqEndpoint: "https://formspree.io/f/mzedqypk",  // Formspree 端点
     uploadsEnabled: false                            // 免费版不收附件；升级付费版后改 true 即可显示附件字段
+  },
+
+  /* ---- 1c. 统计与广告（留空 = 不注入任何第三方脚本、不产生请求）---- */
+  tracking: {
+    ga4Id: "G-7RH3669FL6",              // GA4 衡量 ID
+    metaPixelId: "1079900807956383"     // Meta Pixel ID（沿用旧号）
   },
 
   /* ---- 2. 导航（一级 5 项 + CTA，见方案 §2.2）---- */
